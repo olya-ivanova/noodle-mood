@@ -8,20 +8,27 @@ const Layout = () => {
   return (
     <div className="main">
       <nav className="nav">
-        <div className="logo">
-          <img src={noodleImage} alt="Noodles" />
-          <h2>Noodle</h2>
+        <div>
+          <NavLink className="logo" to="/">
+            <img src={noodleImage} alt="Noodles" />
+            <h2>Noodle</h2>
+          </NavLink>
         </div>
         <div className="nav-links">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/menu">Menu</NavLink>
+          <NavLink to="/chefs">Our chefs</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contacts">Contacts</NavLink>
         </div>
         <div> Basket</div>
       </nav>
-
-      <Outlet />
+      <main className="main">
+        <Outlet />
+      </main>
+      <footer className="footer">
+        All rights reserved, {new Date().getFullYear()}
+      </footer>
     </div>
   );
 };
