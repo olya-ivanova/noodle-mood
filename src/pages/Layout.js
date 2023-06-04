@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 import noodleImage from "../assets/nav-images/noodle.png";
